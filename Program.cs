@@ -49,8 +49,12 @@ namespace ConsoleApp2
 
             }
             int finale = reverse(result);
-            if (finale.ToString().Length < big.ToString().Length) finale = finale * 10;
-            Console.WriteLine("Finale result " + finale);
+
+            while (finale.ToString().Length < big.ToString().Length) { 
+                finale = finale * 10; 
+            }
+
+            Console.WriteLine("Finale result of first number + second number is: " + finale);
         }
 
         static int reverse(int num)
